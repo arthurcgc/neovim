@@ -27,7 +27,7 @@ vim.opt.incsearch = true
 vim.opt.updatetime = 50
 
 -- color column
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"
 
 require("remap")
 require("plugins")
