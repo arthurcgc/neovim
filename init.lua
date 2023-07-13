@@ -1,6 +1,3 @@
-require("remap")
-require("plugins")
-
 -- leader key
 vim.g.mapleader = " "
 
@@ -31,3 +28,6 @@ vim.opt.updatetime = 50
 
 -- color column
 vim.opt.colorcolumn = "80"
+
+require("remap")
+require("plugins")

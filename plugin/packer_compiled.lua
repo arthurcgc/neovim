@@ -116,7 +116,7 @@ _G.packer_plugins = {
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
-    config = { "\27LJ\2\nä\1\0\0\4\0\r\0\0266\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\3\0006\0\0\0009\0\4\0+\1\2\0=\1\5\0006\0\6\0'\2\a\0B\0\2\0029\0\b\0B\0\1\0016\0\6\0'\2\t\0B\0\2\0029\0\b\0005\2\v\0005\3\n\0=\3\f\2B\0\2\1K\0\1\0\tview\1\0\0\1\0\1\nwidth\3\20\14nvim-tree\nsetup\22nvim-web-devicons\frequire\18termguicolors\bopt\23loaded_netrwPlugin\17loaded_netrw\6g\bvim\0" },
+    config = { "\27LJ\2\n|\0\0\4\0\a\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0005\2\5\0005\3\4\0=\3\6\2B\0\2\1K\0\1\0\tview\1\0\0\1\0\1\nwidth\3\20\14nvim-tree\nsetup\22nvim-web-devicons\frequire\0" },
     loaded = true,
     path = "/home/arthurcgc/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/nvim-tree/nvim-tree.lua"
@@ -145,7 +145,7 @@ try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\
 time([[Config for dracula.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\nä\1\0\0\4\0\r\0\0266\0\0\0009\0\1\0)\1\1\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\3\0006\0\0\0009\0\4\0+\1\2\0=\1\5\0006\0\6\0'\2\a\0B\0\2\0029\0\b\0B\0\1\0016\0\6\0'\2\t\0B\0\2\0029\0\b\0005\2\v\0005\3\n\0=\3\f\2B\0\2\1K\0\1\0\tview\1\0\0\1\0\1\nwidth\3\20\14nvim-tree\nsetup\22nvim-web-devicons\frequire\18termguicolors\bopt\23loaded_netrwPlugin\17loaded_netrw\6g\bvim\0", "config", "nvim-tree.lua")
+try_loadstring("\27LJ\2\n|\0\0\4\0\a\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0005\2\5\0005\3\4\0=\3\6\2B\0\2\1K\0\1\0\tview\1\0\0\1\0\1\nwidth\3\20\14nvim-tree\nsetup\22nvim-web-devicons\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
 
 _G._packer.inside_compile = false
