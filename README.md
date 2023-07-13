@@ -1,0 +1,2 @@
+# Prerequisites
+install ripgrep
