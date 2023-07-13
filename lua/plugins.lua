@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
 		requires = {
 			-- LSP Support
 			{ 'neovim/nvim-lspconfig' }, -- Required
-			{      -- Optional
+			{       -- Optional
 				'williamboman/mason.nvim',
 				run = function()
 					pcall(vim.cmd, 'MasonUpdate')
@@ -39,12 +39,6 @@ return require('packer').startup(function(use)
 			'nvim-tree/nvim-web-devicons', -- optional
 		},
 		config = function()
-			-- disable netrw at the very start of your init.lua
-			vim.g.loaded_netrw = 1
-			vim.g.loaded_netrwPlugin = 1
-			-- set termguicolors to enable highlight groups
-			vim.opt.termguicolors = true
-
 			require("nvim-web-devicons").setup()
 
 			require("nvim-tree").setup {
