@@ -33,4 +33,25 @@ return require('packer').startup(function(use)
     {'L3MON4D3/LuaSnip'},     -- Required
   }
 }
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+    config = function()
+      -- disable netrw at the very start of your init.lua
+      vim.g.loaded_netrw = 1
+      vim.g.loaded_netrwPlugin = 1
+      -- set termguicolors to enable highlight groups
+      vim.opt.termguicolors = true
+
+      require("nvim-web-devicons").setup()
+
+      require("nvim-tree").setup {
+        view = {
+          width = 20
+        }
+      }
+    end
+    }
 end)
