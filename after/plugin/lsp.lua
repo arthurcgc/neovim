@@ -1,18 +1,41 @@
 local lsp = require('lsp-zero').preset({
-	manage_nvim_cmp = {
-		set_sources = 'recommended'
-	}
+    manage_nvim_cmp = {
+        set_sources = 'recommended'
+    }
 })
 
+
 lsp.on_attach(function(_, bufnr)
-	lsp.default_keymaps({ buffer = bufnr })
-	lsp.buffer_autoformat()
-	vim.keymap.set({ 'n', 'x' }, 'gq', function()
-		vim.lsp.buf.format({ async = false, timeout_ms = 5000 })
-	end)
+    lsp.default_keymaps({ buffer = bufnr })
 end)
 
--- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+lsp.format_mapping('gq', {
+    format_opts = {
+        async = false,
+        timeout_ms = 10000,
+    },
+    servers = {
+        ['null-ls'] = { 'go' },
+    }
+})
+
+lsp.format_on_save({
+    format_opts = {
+        async = false,
+        timeout_ms = 10000,
+    },
+    servers = {
+        ['gopls'] = { 'go' },
+        ['lua_ls'] = { 'lua' },
+    }
+})
 
 lsp.setup()
+
+local null_ls = require('null-ls')
+
+null_ls.setup({
+    sources = {
+        null_ls.builtins.formatting.goimports
+    }
+})
