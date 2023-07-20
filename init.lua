@@ -26,8 +26,5 @@ vim.opt.incsearch = true
 -- plugin is governed by the setting updatetime in ms
 vim.opt.updatetime = 50
 
--- color column
-vim.opt.colorcolumn = "120"
-
 require("remap")
 require("plugins")
