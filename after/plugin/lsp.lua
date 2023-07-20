@@ -39,3 +39,19 @@ null_ls.setup({
         null_ls.builtins.formatting.goimports
     }
 })
+
+-- Make sure you setup `cmp` after lsp-zero
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+cmp.setup({
+    mapping = {
+        ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        ['<Tab>'] = cmp_action.luasnip_supertab(),
+        ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+    },
+    preselect = 'item',
+    completion = {
+        completeopt = 'menu,menuone,noinsert'
+    },
+})
