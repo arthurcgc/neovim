@@ -15,7 +15,7 @@ lsp.format_mapping('gq', {
         timeout_ms = 10000,
     },
     servers = {
-        ['null-ls'] = { 'go' },
+        ['null-ls'] = { 'go', 'yaml', 'yml' },
     }
 })
 
@@ -27,6 +27,7 @@ lsp.format_on_save({
     servers = {
         ['gopls'] = { 'go' },
         ['lua_ls'] = { 'lua' },
+        ['null-ls'] = { 'go', 'yaml', 'yml' },
     }
 })
 
@@ -36,7 +37,8 @@ local null_ls = require('null-ls')
 
 null_ls.setup({
     sources = {
-        null_ls.builtins.formatting.goimports
+        null_ls.builtins.formatting.goimports,
+        null_ls.builtins.formatting.yamlfix,
     }
 })
 
