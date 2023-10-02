@@ -49,7 +49,8 @@ local cmp_action = require('lsp-zero').cmp_action()
 cmp.setup({
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
-        ['<Tab>'] = cmp_action.luasnip_supertab(),
+        -- have to disable tab to work with github copilot
+        -- ['<Tab>'] = cmp_action.luasnip_supertab(),
         ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
     },
     preselect = 'item',
